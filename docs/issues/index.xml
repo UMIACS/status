@@ -6,15 +6,15 @@
     <description>Recent content in Issues on UMIACS System Status</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Aug 2018 04:13:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Aug 2018 04:13:00 +0000</lastBuildDate>
     
 	<atom:link href="umiacs.github.io/status/issues/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>GitLab Service Disruption</title>
+      <title>UMIACS Home Page</title>
       <link>umiacs.github.io/status/issues/test/</link>
-      <pubDate>Mon, 27 Aug 2018 04:13:00 +0000</pubDate>
+      <pubDate>Tue, 28 Aug 2018 04:13:00 +0000</pubDate>
       
       <guid>umiacs.github.io/status/issues/test/</guid>
       <description>Test Incident - This is just a test! Everything is fine&amp;hellip;</description>
