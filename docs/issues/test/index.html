@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Test Incident - This is just a test! Everything is fine&hellip;">
+    <title>GitLab Service Disruption | UMIACS System Status</title>
+    <link rel="canonical" href="umiacs.github.io/status/issues/test/">
+    <meta name="generator" content="Hugo 0.47.1" />
+    <meta name="theme-color" content="#ffffff">
+    <script>
+    var themeBrandColor = '#ffffff';
+    var themeOkColor = '#228B22';
+    var themeNoticeColor = '#708090';
+    var themeDisruptedColor = '#FF8C00';
+    var themeDownColor = '#DC143C';
+    </script>
+    
+    <style>
+     
+
+    html, body {
+      margin: 0;
+      background: #fff;
+      color: #444;
+      font: 100%/1.5 BlinkMacSystemFont, -apple-system, "San Francisco Text", "Roboto", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+      box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    hr {
+      border: 0;
+      border-bottom: 1px solid #ccc;
+      margin: 24px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      border-bottom: 1px dotted currentColor;
+    }
+
+    a.no-underline { border-bottom: 0; }
+
+    a:hover { border-bottom-style: solid; }
+    a:active { position: relative; top: 2px; }
+
+    h2 { font-size: 26px; }
+    h3 { font-size: 20px; }
+    h4 { font-size: 18px; }
+
+    .headline { font-size: 20px; }
+    .bold { color: #000; }
+
+    h2, h4 {
+      font-weight: normal;
+      color: #000;
+    }
+
+    h3 {
+      margin: 0;
+      color: #000;
+    }
+
+    .date {
+      margin-bottom: 0;
+      color: #666;
+      font-variant: small-caps;
+    }
+
+    .faded {
+      color: #999;
+    }
+
+    .header {
+      padding: 8px 0;
+      background: #ffffff;
+    }
+
+    .header a {
+      color: #fff;
+      font-size: 14px;
+      font-variant: small-caps;
+    }
+
+    .header--large { padding: 16px; }
+    .header--large a { font-size: 20px; }
+
+    img {
+      border: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .contain {
+      max-width: 640px;
+      margin: 16px auto;
+      padding: 16px;
+    }
+
+    .contain--more {
+      max-width: 480px;
+    }
+
+    .center { text-align: center; }
+    .right { text-align: right; }
+    .padding-s { padding: 6px; }
+    .padding { padding: 12px; }
+
+    .summary {
+      padding: 16px;
+      color: #fff;
+    }
+
+    .summary__date {
+      display: block;
+      cursor: pointer;
+    }
+
+    .summary__date:hover {
+      color: #ccc;
+    }
+
+    .summary__date:hover:after {
+      content: ' ⟳ ';
+      color: #fff;
+    }
+
+    .components {
+      border: 2px solid #ddd;
+      border-bottom: 0;
+    }
+
+    .component {
+      color: #000;
+      padding: 16px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .description { cursor: pointer; position: relative; }
+    .description__text { display: none; }
+    .description:hover .description__text,
+    .description:active .description__text  {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 32px;
+      background: #181818;
+      color: #fff;
+      z-index: 50;
+      padding: 8px;
+      border: 2px solid #242424;
+      font-size: 14px;
+      color: #ccc;
+      width: 1000%;
+      height: auto;
+    }
+
+    @media (max-width: 640px) {
+      .description:hover .description__text,
+      .description:active .description__text {
+        width: 50vw;
+      }
+    }
+
+    .ok { color: #228B22; }
+    .error { color: #DC143C; }
+
+    .footer {
+      padding: 10px;
+      background: #f5f5f5;
+    }
+
+    .copyright {
+      display: block;
+      font-variant: small-caps;
+    }
+
+    .copyright a, a.logo {
+      border-bottom: 0;
+    }
+
+    .logo img {
+      height: auto;
+      width: 320px;
+    }
+
+    .logo--small img {
+      height: auto;
+      width: 160px;
+    }
+
+    .tabs { border-bottom: 1px solid #ccc; }
+    .tabs--inner { padding: 0 16px; margin: 0 auto; }
+    a.tab { display: inline-table; }
+    .tab--current {
+      border: 1px solid #ccc;
+      border-bottom-color: #fff;
+      padding: 12px 18px;
+      position: relative;
+      top: 1px;
+    }
+
+    .tab--other {
+      border: 0;
+      padding: 12px 18px;
+      position: relative;
+      top: 1px;
+      color: #aaa;
+    }
+    .tab--other:hover { color: #000; }
+
+    .article {
+      padding-bottom: 20px;
+    }
+
+    .article h3 { line-height: 1.25; }
+    .article h3 a { border: 0; }
+    .article h3 a:hover { border-bottom: 1px solid currentColor; }
+
+
+     
+
+    .status-ok .summary { background: #228B22; }
+    .status-disrupted .summary, .change-header-color.status-disrupted .header { background: #FF8C00; }
+    .status-down .summary, .change-header-color.status-down .header { background: #DC143C; }
+    .status-notice .summary, .change-header-color.status-notice .header { background: #708090; }
+
+    .announcement-box .padding {
+      padding: 16px;
+      border-bottom: 1px solid currentColor;
+    }
+
+    .status-disrupted .announcement-box .padding { border-bottom-color: #FF8C00; }
+    .status-down .announcement-box .padding { border-bottom-color: #DC143C; }
+    .status-notice .announcement-box .padding { border-bottom-color: #708090; }
+
+    .status-ok .announcement-box { border: 2px solid #228B22; }
+    .status-disrupted .announcement-box { border: 2px solid #FF8C00; }
+    .status-down .announcement-box { border: 2px solid #DC143C; }
+    .status-notice .announcement-box { border: 2px solid #708090; }
+
+    .status-homepage .announcement-box { border-bottom-width: 1px; }
+
+
+     
+
+    .component-status { float: right; }
+    .component[data-status="ok"] .component-status { color: #228B22;; }
+    .component[data-status="disrupted"] .component-status { color: #FF8C00;; }
+    .component[data-status="down"] .component-status { color: #DC143C;; }
+    .component[data-status="notice"] .component-status { color: #708090;; }
+
+     
+
+    @media (min-width: 640px) {
+      .summary__date {
+        float: right;
+        display: inline;
+      }
+    }
+
+    ::selection { background: #B4D5FF; }
+    html { -webkit-tap-highlight-color: rgba(0,0,0, 0.25); }
+    </style>
+    
+  </head>
+
+
+
+
+
+
+
+
+
+  <body class="status-notice">
+    
+
+
+<div class="header">
+  <div class="contain">
+    <a href="/" class="logo logo--small">
+      
+        <img src="/logo.png" alt="UMIACS System Status">
+          
+    </a>
+  </div>
+</div>
+
+
+
+
+
+    <div class="contain">
+      <a href="umiacs.github.io/status">← Go back</a>
+    </div>
+
+    <div class="contain">
+      
+
+
+
+
+
+
+<div class="article">
+  
+    <em>Ongoing, services on notice</em>
+  
+  <h3>
+    <a href="umiacs.github.io/status/issues/test/">GitLab Service Disruption</a>
+  </h3>
+
+  <small class="date">
+    August 27, 2018 at 4:13 AM
+  </small>
+
+  <hr>
+
+  <p><strong>Test Incident</strong> - This is just a test! Everything is fine&hellip;</p>
+
+</div>
+<div class="padding"></div>
+
+    </div>
+
+
+    <script type="text/javascript">
+  
+
+
+  console.log('You are using cState v2.0-rc4: https://github.com/cstate');
+  document.querySelector('html').className = 'js';
+
+
+  
+
+
+  if (document.body.className === 'change-header-color') {
+    if (document.body.className === 'status-down') {
+      document.querySelector('meta[name=theme-color]').setAttribute('content', themeDownColor);
+    } else if (document.body.className === 'status-disrupted') {
+      document.querySelector('meta[name=theme-color]').setAttribute('content', themeDisruptedColor);
+    } else {
+      document.querySelector('meta[name=theme-color]').setAttribute('content', themeNoticeColor);
+    }
+  }
+
+  function hasClass(element, className) {
+    return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+  }
+
+  if (hasClass(document.querySelector('body'), 'status-homepage')) {
+    var lastUpdated = document.querySelector('.summary__date');
+    lastUpdated.innerHTML = 'Last checked just now';
+
+    var lastUpdate = new Date();
+
+    function timeSince(date) {
+      var seconds = Math.floor((new Date() - date) / 1000);
+
+      var interval = Math.floor(seconds / 31536000);
+
+      if (interval > 1) {
+        return interval + ' years';
+      }
+      interval = Math.floor(seconds / 2592000);
+      if (interval > 1) {
+        return interval + ' months';
+      }
+      interval = Math.floor(seconds / 86400);
+      if (interval > 1) {
+        return interval + 'd';
+      }
+      interval = Math.floor(seconds / 3600);
+      if (interval > 1) {
+        return interval + 'h';
+      }
+      interval = Math.floor(seconds / 60);
+      if (interval > 1) {
+        return interval + ' min';
+      }
+      return Math.floor(seconds) + 's';
+    }
+    var aDay = 24*60*60*1000;
+  }
+
+  window.setInterval(function() {
+    if (hasClass(document.querySelector('body'), 'status-homepage')) {
+      lastUpdated.innerHTML = 'Last checked ' + timeSince(lastUpdate) + ' ago';
+
+      
+      if (lastUpdate > 290000) {
+        location.reload;
+      }
+    }
+  }, 5000)
+</script>
+
+
+
+
+    
+
+<div class="footer">
+  <div class="contain">
+    <p><strong>2018 &copy; UMIACS System Status</strong>
+       &nbsp; • &nbsp; <a href="#">Back to top</a>
+    </p>
+
+    <p>We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.</p>
+
+    
+    <small class="copyright faded">Powered by <a href="https://github.com/cstate/cstate">cState v2.0</a></small>
+  </div>
+</div>
+
+
+
+  </body>
+</html>

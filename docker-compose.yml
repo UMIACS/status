@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  hugo:
+    build:
+        context: .
+    command: hugo -v
+    volumes:
+        - .:/home
+    ports:
+        - "1313:1313"
