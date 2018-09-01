@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Issues on UMIACS System Status</title>
-    <link>umiacs.github.io/status/issues/</link>
+    <link>/issues/</link>
     <description>Recent content in Issues on UMIACS System Status</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 28 Aug 2018 04:13:00 +0000</lastBuildDate>
     
-	<atom:link href="umiacs.github.io/status/issues/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/issues/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>UMIACS Home Page</title>
-      <link>umiacs.github.io/status/issues/test/</link>
+      <link>/issues/test/</link>
       <pubDate>Tue, 28 Aug 2018 04:13:00 +0000</pubDate>
       
-      <guid>umiacs.github.io/status/issues/test/</guid>
+      <guid>/issues/test/</guid>
       <description>Test Incident - This is just a test! Everything is fine&amp;hellip;</description>
     </item>
     

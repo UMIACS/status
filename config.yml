@@ -61,7 +61,7 @@ languageCode: en
 #
 # Default: /
 # Example: https://status.example.com/
-baseURL: umiacs.github.io/status
+baseURL: /
 
 ############################################################
 # +------------------------------------------------------+ #

@@ -3,28 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>umiacs.github.io/status/issues/test/</loc>
+    <loc>/issues/test/</loc>
     <lastmod>2018-08-28T04:13:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>umiacs.github.io/status/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>umiacs.github.io/status/issues/</loc>
+    <loc>/issues/</loc>
     <lastmod>2018-08-28T04:13:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>umiacs.github.io/status/tags/</loc>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>umiacs.github.io/status/</loc>
+    <loc>/</loc>
     <lastmod>2018-08-28T04:13:00+00:00</lastmod>
     <priority>0</priority>
   </url>
